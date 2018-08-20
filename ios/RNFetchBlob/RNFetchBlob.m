@@ -36,6 +36,11 @@ dispatch_queue_t fsQueue;
     return commonTaskQueue;
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
 + (RCTBridge *)getRCTBridge
 {
     RCTRootView * rootView = [[UIApplication sharedApplication] keyWindow].rootViewController.view;
